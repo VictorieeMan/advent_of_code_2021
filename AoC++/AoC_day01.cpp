@@ -1,9 +1,11 @@
+//Advent of Code 2021 - Day 01
+
 #include "AoC++.h"
 
 using namespace std;
 
-int main()
+int aocDay01()
 {
-	cout << "Hello CMake." << endl;
+	cout << "aocDay01" << endl;
 	return 0;
 }
