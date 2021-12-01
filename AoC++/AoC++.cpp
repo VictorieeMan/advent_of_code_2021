@@ -2,16 +2,29 @@
 // 
 //Advent of Code 2021
 
+//Headers
 #include "AoC++.h"
 
-using namespace std;
+//Daily headers
+#include "aocDay01.h"
 
-//Informing AoC++.cpp that these are declared elsewhere
-int aocDay01();
+using namespace std;
 
 int main()
 {
 	cout << "Merry Christmas!" << endl;
-	aocDay01();
+
+    string path = "puzzleData\\";
+    string filename = "AoC_day01_input.txt";
+    string filePath = path + filename;
+
+    vector<string> vecStr;
+    vecStr = readFileToStringVector(filePath);
+
+    vector<int> vecInt;
+    vecInt = vecStrToInt(vecStr);
+
+    aocDay01(vecInt);
+
 	return 0;
 }
