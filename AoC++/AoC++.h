@@ -9,9 +9,28 @@
 #include <string>
 #include <vector>
 
+// TODO: Reference additional headers your program requires here.
+
 //using namespace std;
 
 //Input functions
+
+//File path creator
+std::string filePathGen(std::string day, int type = 0) {
+	std::string path = "puzzleData\\";
+	std::string filename = "AoC_day" + day + "_input";
+
+	if (type == 0) {
+		filename += ".txt";
+	}
+	else {
+		filename += std::to_string(type) + ".txt";
+	}
+
+	std::string filePath = path + filename;
+
+	return filePath;
+}
 
 //Given a file path, read file line by line to StringVector and return it
 std::vector<std::string> readFileToStringVector(std::string inputFilePath) {
@@ -35,7 +54,9 @@ std::vector<std::string> readFileToStringVector(std::string inputFilePath) {
 	return fileLines;
 }
 
-//Convert functions
+//Other functions
+
+//Conversion functions
 
 //Given vecStr containing numbers, converts to vecInt
 std::vector<int> vecStrToInt(std::vector<std::string> vecStr) {
@@ -46,4 +67,11 @@ std::vector<int> vecStrToInt(std::vector<std::string> vecStr) {
 	return vecInt;
 }
 
-// TODO: Reference additional headers your program requires here.
+//Output / Messaging functions
+
+void myMessage(std::string message, int n = 1) {
+	std::cout << message;
+	for (int i = 0; i < n; i++) {
+		std::cout << std::endl;
+	}
+}

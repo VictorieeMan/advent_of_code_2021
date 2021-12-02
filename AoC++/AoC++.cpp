@@ -13,18 +13,17 @@ using namespace std;
 int main()
 {
 	cout << "Merry Christmas!" << endl;
-
-    string path = "puzzleData\\";
-    string filename = "AoC_day01_input.txt";
-    string filePath = path + filename;
-
-    vector<string> vecStr;
-    vecStr = readFileToStringVector(filePath);
-
-    vector<int> vecInt;
-    vecInt = vecStrToInt(vecStr);
-
-    aocDay01(vecInt);
+    aocDay01();
 
 	return 0;
 }
+
+//My standard code for opening and reading file to memory
+// 
+//string filePath = filePathGen("01");
+//
+//vector<string> vecStr;
+//vecStr = readFileToStringVector(filePath);
+//
+//vector<int> vecInt;
+//vecInt = vecStrToInt(vecStr);
