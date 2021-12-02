@@ -69,7 +69,16 @@ std::vector<int> vecStrToInt(std::vector<std::string> vecStr) {
 
 //Output / Messaging functions
 
-void myMessage(std::string message, int n = 1) {
+//Outputs given string to terminal, followed by n numbers of linebreakes.
+void printString(std::string message, int n = 1) {
+	std::cout << message;
+	for (int i = 0; i < n; i++) {
+		std::cout << std::endl;
+	}
+}
+
+//Outputs given int to terminal, followed by n numbers of linebreakes.
+void printInt(int message, int n = 1) {
 	std::cout << message;
 	for (int i = 0; i < n; i++) {
 		std::cout << std::endl;

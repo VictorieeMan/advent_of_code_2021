@@ -8,17 +8,27 @@ using namespace std;
 
 int aocDay01()
 {
-	myMessage("aocDay01",2);
+	printString("aocDay01",2);
 
-	string filePath = filePathGen("01");
+	string filePath = filePathGen("01",2);
 
 	vector<string> vecStr;
 	vecStr = readFileToStringVector(filePath);
 
-	vector<int> vecInt;
-	vecInt = vecStrToInt(vecStr);
+	vector<int> inputData;
+	inputData = vecStrToInt(vecStr);
 
-	myMessage("Part One");
+	printString("Part One");
+
+	//Parameters
+	int ups = 0;
+	int downs = 0;
+	int notApp = 0;
+
+	//Checking the ups / downs in the data
+	for (int i = 0; i < inputData.size(); i++) {
+		printInt(inputData[i]);
+	}
 
 	return 0;
 }
