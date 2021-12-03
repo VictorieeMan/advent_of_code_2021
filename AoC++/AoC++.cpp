@@ -7,13 +7,14 @@
 
 //Daily headers
 #include "aocDay01.h"
+#include "aocDay02.h"
 
 using namespace std;
 
 int main()
 {
 	cout << "Merry Christmas!" << endl;
-    aocDay01();
+    aocDay02();
 
 	return 0;
 }
