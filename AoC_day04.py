@@ -25,7 +25,8 @@ for line in boardData:
         board.append([int(n) for n in line.split()])
         if len(board) == 5:
             bingoBoards.append(board)
-            board = [] #Why does board.clear() give bingoBoards with three empty [] when the loop is finished?
+            board = []  #Why does board.clear() give bingoBoards with three empty [] when the loop is finished?
+                        #Ans: https://stackoverflow.com/questions/55897375/difference-between-list-vs-list-clear
 
 print("bingoBoards: ",bingoBoards)
 
@@ -123,13 +124,6 @@ for number in drawnNumbers:
                 winData = []
                 winData.append([boardNr, number]) # The winner board and it's final number
                 victoryBoards.append(boardNr)
-"""
-            if True:
-                break
-    else:
-        continue
-    break
-"""
 
 # Summing up the unmarked numbers
 unmarkedSum = 0
